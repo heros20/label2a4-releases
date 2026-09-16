@@ -1,0 +1,23 @@
+{
+  "version": "0.3.30",
+  "archive_url": "https://sdmntpreastus.oaiusercontent.com/files/00000000-0f84-81f9-81dc-4a7025ec3472/raw?se=2026-09-16T12%3A02%3A52Z&sp=r&sv=2026-02-06&sr=b&scid=a165ee82-dc99-5e10-b4cb-61bcf7900292&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T08%3A53%3A10Z&ske=2026-09-17T08%3A53%3A10Z&sks=b&skv=2026-02-06&sig=J02q5eNz0R%2Bg6x3inATv7%2BLsg8qgQMyduavTwn2TfwE%3D",
+  "archive_sha256": "ac9c5db235977d92fedc66259990ca7858f6e5ea06354feeffd78a71a4ac0cb1",
+  "files": {
+    "Label2A4.Bureau.Setup.0.3.30.exe": {
+      "size": 108085264,
+      "sha256": "12b53fe30ef63921b1a8e9cd59d90f68c2c25be809d0e341caf78a999f4823a3",
+      "sha512": "RUumr72fzsjHNuBskMYqsmxHKz3wh89Xm5oFthwHAlG9kOazc7eGPdoWFeM4QshK84naiRCEo6LSD4LDr31bXA=="
+    },
+    "Label2A4.Bureau.Setup.0.3.30.exe.blockmap": {
+      "size": 114053,
+      "sha256": "06d025c7330d4b6c9de326b388bce77bb7ddce6e90fdd2f2d8f67b9f7441952c",
+      "sha512": "bi2L+xRxZq5qf/QQPtFZ7Utpiqjwq0RbRC9kbU+7/SiG9gxwA6K69arSh+twFadMOpS9e3jsMT5tA8MOWWd6jw=="
+    },
+    "latest.yml": {
+      "size": 362,
+      "sha256": "c38626a8a169506824d1011b9217409179c35773a5c0b03243635d7b38a6e959",
+      "sha512": "nQZlLCJCmbw7vG7SyWqDgNFF+JAr6D468MU1Iat1YivbcrvxTqbtqZEZPwwxRycPTkOILDmvA4GTQ34PmazVIA=="
+    }
+  },
+  "notes": "## Label2A4 Bureau 0.3.30\n\n### Correctifs et améliorations\n- Découpage automatique Chronopost aligné sur celui du site, avec conservation du bloc inférieur de l’étiquette.\n- Vérification des doublons Pro dès l’import, avant Enregistrer ou Imprimer ; suppression des fausses alertes causées par l’action venant de démarrer.\n- Référence agrandie sous les étiquettes dans l’aperçu, les PDF enregistrés et l’impression.\n- Nouveau réglage indépendant : Mon compte > Profil et sécurité > Documents générés > Afficher la référence agrandie sous les étiquettes. La référence et la signature Label2A4 avec son QR code peuvent être activées séparément, selon les droits du compte.\n\n### Validation\nSetup Windows x64 NSIS, blockmap et latest.yml vérifiés par SHA-256/SHA-512. Tests automatisés réussis sous Windows et Linux ; contrôle octet par octet des sources embarquées. Aucun essai sur imprimante physique.\n\n### Dépendances\nCorrections compatibles appliquées : 14 alertes supprimées, dont une critique. Deux alertes élevées liées à Electron et extract-zip restent suivies pour une mise à niveau majeure dédiée.\n\nSource bureau intégrée sur main : 5b2bc823e323655790670034c1c86d06bc74ae96. Source du build contrôlé : 19f45597a864207fc1b97f8b820fe630b47c84a5. Site en production : 2e2d2b24e616c44fe314fab88dd95219d28fe02e.\n\nSHA-256 du setup : 12b53fe30ef63921b1a8e9cd59d90f68c2c25be809d0e341caf78a999f4823a3."
+}
