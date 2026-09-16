@@ -1,0 +1,27 @@
+name: Publish verified desktop release
+on:
+  push:
+    branches: [main]
+    paths: [.github/release-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: desktop-release-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify binary artifacts, create a new release and check public downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/publish-verified-release.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: public-release-receipt
+          path: release-receipt.json
+          retention-days: 30
